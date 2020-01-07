@@ -12,7 +12,9 @@ Below you'll find a handful of examples and brief walk-throughs which will hopef
 
 ## Example 1 - Hello World
 
-To get started, we'll work with 3 of the most fundamental components of Swing: JFrame, JPanel, and JLabel.  
+To get started, we'll work with 3 of the most fundamental components of Swing: **JFrame** (windows/shells), **JPanel** (containers that hold components), and **JLabel** (text or graphics).  The end result will be a simple window that displays the text "Hello World!".  You can follow along with the source code [here](https://github.com/robbgatica/comp170-swing/blob/master/src/swing/comp170/FrameDemo.java).  
 
 <img src="images/frame.png" alt="frame-demo" width="250" height="250" />
+
+
 
