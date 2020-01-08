@@ -111,3 +111,7 @@ public static void main(String[] args) {
 
 Now that you've seen a very basic example of Swing, we can take a look at a slightly more interesting example.  Below is a small app that converts metric units to imperial units (km to miles, Celsius to F, etc).  You'll see how to incorporate input/output and event listeners with `JTextField, JButton, and JTabbedPane` components.  
 
+
+<p align="center">
+<img src="images/calc1.png" alt="frame-demo" width="500" height="300" />
+  </p>
