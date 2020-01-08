@@ -28,9 +28,27 @@ To get started, we'll work with 3 of the most fundamental components of Swing: *
 
 At this point, your code should look like this:
 
-<p align="center">
-<img src="images/demo-code1.png" alt="demo-code" />
-  </p>
+```
+import javax.swing.*;
+
+public class FrameDemo extends JFrame {
+
+	public FrameDemo() {
+		
+		super("Simple Example");
+		setSize(300, 300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel("Hello World");
+		panel.add(label);
+		add(panel);
+		
+		setVisible(true);
+	}
+```
+
+
 
 
 
