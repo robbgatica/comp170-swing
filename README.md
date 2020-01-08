@@ -113,5 +113,5 @@ Now that you've seen a very basic example of Swing, we can take a look at a slig
 
 
 <p align="center">
-<img src="images/calc1.png" alt="frame-demo" width="500" height="300" />
+<img src="images/calc1.png" alt="frame-demo" width="600" height="300" />
   </p>
