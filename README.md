@@ -109,9 +109,11 @@ public static void main(String[] args) {
 
 ## Example 2 - Metric Conversion Calculator
 
-Now that you've seen a very basic example of Swing, we can take a look at a slightly more interesting example.  Below is a small app that converts metric units to imperial units (km to miles, Celsius to F, etc).  You'll see how to incorporate input/output and event listeners with `JTextField, JButton, and JTabbedPane` components.  
+Now that you've seen a very basic example of Swing, we can take a look at a slightly more interesting example.  Below is a small app that converts metric units to imperial units (km to miles, Celsius to F, etc).  You'll see how to incorporate input/output and event listeners with `JTextField, JButton, and JTabbedPane` components.  You can view the source code for this project [here](https://github.com/robbgatica/comp170-swing/tree/master/src/swing/comp170/conversion).
 
 
 <p align="center">
 <img src="images/calc1.png" alt="frame-demo" width="600" height="300" />
   </p>
+  
+1.  I've created two separate classes for this project, one that contains the `JPanel` (and most of the functionality) and one that contains the `JFrame`: ConversionPanel and ConversionApp, respectively.  We'll start off by walking through the ConversionPanel class.  
