@@ -27,14 +27,14 @@ import javax.swing.*;
 
 public class FrameDemo extends JFrame {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 
-}
+	}
 
 }
 ```
 
-3.  Next, we'll create a constructor for our class, in which we will add a title to the window, set the size parameters using  the `setSize()` method, and handle the exit/quit functionality with the `setDefaultCloseOperation()` method.  All of these methods belong to the JFrame class.  Since we inhereted from JFrame, we can use them in our class as well.  
+3.  Next, we'll create a constructor for our class, in which we will add a title to the window, set the size parameters (width and height in pixels) using  the `setSize()` method, and handle the exit/quit functionality with the `setDefaultCloseOperation()` method (EXIT_ON_CLOSE in this case).  All of these methods belong to the JFrame class.  Since we inhereted from JFrame, we can use them in our class as well.
 
 ```
 import javax.swing.*;
@@ -78,6 +78,7 @@ public class FrameDemo extends JFrame {
 	}
 ```
 
+5. At this point, if we create an instance of our FrameDemo class inside the `main()` method and run the program, our "Hello World" text will display in a new JFrame window.  However, I've included a (completely optional) method which will set the Look and Feel of our Swing components and GUI.  These are settings you can use to change the overall appearance, and there are a number of templates you can use if you choose to do so.  Read more about it here: [https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html](https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html)
 
 
 
