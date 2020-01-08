@@ -29,7 +29,7 @@ To get started, we'll work with 3 of the most fundamental components of Swing: *
 At this point, your code should look like this:
 
 <p align="center">
-<img src="images/democode.png" alt="demo-code" />
+<img src="images/demo-code1.png" alt="demo-code" />
   </p>
 
 
