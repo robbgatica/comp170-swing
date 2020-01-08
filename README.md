@@ -78,8 +78,36 @@ public class FrameDemo extends JFrame {
 	}
 ```
 
-5. At this point, if we create an instance of our FrameDemo class inside the `main()` method and run the program, our "Hello World" text will display in a new JFrame window.  However, I've included a (completely optional) method which will set the Look and Feel of our Swing components and GUI.  These are settings you can use to change the overall appearance, and there are a number of templates you can use if you choose to do so.  Read more about it here: [https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html](https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html)
+5. At this point, if we create an instance of our FrameDemo class inside the `main()` method and run the program, our "Hello World" text will display in a new JFrame window.  Before we do that, however, I've included a (completely optional) method which will set the Look and Feel of our Swing components and GUI.  These are settings you can use to change the overall appearance, and there are a number of templates you can use if you choose to do so.  Read more about it here: [https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html](https://docs.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html)
 
+```
+	/*
+	 * This sets the GUI's general appearance to a specific Look and Feel. In this
+	 * case, its 'Nimbus'.  You may choose another Look and Feel, or delete the setLookAndFeel() 
+	 * method altogether and go with the default Look and Feel.  
+	 */
 
+	private static void setLookAndFeel() {
+		try {
+			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 
+```
+
+6.  Whether or not you opted to add the `setLookAndFeel()` method, we'll complete this demo by instantiating our class in `main()`.
+
+```
+public static void main(String[] args) {
+
+		setLookAndFeel();
+		new FrameDemo();
+	}
+```
+
+## Example 2 - Metric Conversion Calculator
+
+Now that you've seen a very basic example of Swing, we can take a look at a slightly more interesting example.  Below is a small app that converts metric units to imperial units (km to miles, Celsius to F, etc).  You'll see how to incorporate input/output and event listeners with `JTextField, JButton, and JTabbedPane` components.  
 
