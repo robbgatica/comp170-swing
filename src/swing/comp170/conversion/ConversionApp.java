@@ -7,7 +7,7 @@ public class ConversionApp extends JFrame {
 	
 	public ConversionApp() {
 	
-	super("Tabbed Pane Conversion Calculator");
+	super("Metric to Imperial Conversion Calculator");
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setLookAndFeel();
 	setSize(480, 218);

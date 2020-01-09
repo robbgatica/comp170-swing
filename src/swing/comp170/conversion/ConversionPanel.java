@@ -10,7 +10,7 @@ import javax.swing.*;
 @SuppressWarnings("serial")
 public class ConversionPanel extends JPanel implements ActionListener {
 
-	final static double CELSIUS_CONST = 1.8, KM_CONST = 0.6213, KG_CONST = 2.2046, VOL_CONST = 0.26417;
+	final static double CELSIUS_CONST = 1.8, KM_CONST = 1.609, KG_CONST = 2.2046, VOL_CONST = 0.26417;
 	private String conversionType;
 	private JTextField value1, result;
 	private JLabel unit1, unit2, equals;
@@ -27,8 +27,8 @@ public class ConversionPanel extends JPanel implements ActionListener {
 		setLayout(layout);
 
 		// Text Boxes
-		value1 = new JTextField("0", 5);
-		result = new JTextField("0", 5);
+		value1 = new JTextField("0", 10);
+		result = new JTextField("0", 10);
 
 		// Labels
 		equals = new JLabel("=");
@@ -60,14 +60,14 @@ public class ConversionPanel extends JPanel implements ActionListener {
 			if (conversionType == "temp") {
 				total = val1 * CELSIUS_CONST + 32;
 			} else if (conversionType == "dist") {
-				total = val1 * KM_CONST;
+				total = val1 / KM_CONST;
 			} else if (conversionType == "mass") {
 				total = val1 * KG_CONST;
 			} else if (conversionType == "vol") {
 				total = val1 * VOL_CONST;
 			}
 			result.setText("" + df.format(total));
-			
+			 
 		} catch (NumberFormatException numEx) {
 			value1.setText("0");
 			result.setText("0");
