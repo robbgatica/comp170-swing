@@ -12,7 +12,7 @@ public class ConversionPanel extends JPanel implements ActionListener {
 
 	final static double CELSIUS_CONST = 1.8, KM_CONST = 1.609, KG_CONST = 2.2046, VOL_CONST = 0.26417;
 	private String conversionType;
-	private JTextField value1, result;
+	private JTextField input, result;
 	private JLabel unit1, unit2, equals;
 	private JButton calcButton;
 	double total;
@@ -22,12 +22,12 @@ public class ConversionPanel extends JPanel implements ActionListener {
 		super();
 		this.conversionType = conversionType;
 
-		// Layout
+		// FlowLayout takes an 'alignment argument' - in this case it is center aligned (FlowLayout.CENTER)
 		FlowLayout layout = new FlowLayout(FlowLayout.CENTER);
 		setLayout(layout);
 
 		// Text Boxes
-		value1 = new JTextField("0", 10);
+		input = new JTextField("0", 10);
 		result = new JTextField("0", 10);
 
 		// Labels
@@ -44,7 +44,7 @@ public class ConversionPanel extends JPanel implements ActionListener {
 
 		// Add Components
 		add(unit1);
-		add(value1);
+		add(input);
 		add(equals);
 		add(result);
 		add(unit2);
@@ -55,7 +55,7 @@ public class ConversionPanel extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		try {
-			double val1 = Double.parseDouble(value1.getText());
+			double val1 = Double.parseDouble(input.getText());
 			DecimalFormat df = new DecimalFormat("###.00");
 			if (conversionType == "temp") {
 				total = val1 * CELSIUS_CONST + 32;
@@ -69,7 +69,7 @@ public class ConversionPanel extends JPanel implements ActionListener {
 			result.setText("" + df.format(total));
 			 
 		} catch (NumberFormatException numEx) {
-			value1.setText("0");
+			input.setText("0");
 			result.setText("0");
 		}
 
